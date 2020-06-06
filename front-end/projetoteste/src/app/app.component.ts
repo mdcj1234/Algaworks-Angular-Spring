@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   nome = 'Marcio';
-  idade = 26;
+  contador = 0;
+  adicionado = false;
+  funcionarios = [];
 
-  getIdade() {
-    return this.idade;
+  adicionar() {
+    this.adicionado = true;
+    this.funcionarios.push({
+      id: ++this.contador,
+      nome: this.nome
+    });
   }
 }
